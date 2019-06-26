@@ -8,6 +8,8 @@
     <title>emi kojima</title>
     <!-- Favicon -->
     <link rel="shortcut icon" href="img/favicon/favicon.ico">
+    <!-- Fontawesome  -->
+    <link rel="stylesheet" href="css/fontawesome/css/fontawesome.min.css">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="css/bootstrap/bootstrap.css">
     <!-- Custom CSS -->
@@ -19,8 +21,44 @@
     <div id="preloader">
       <div id="status">&nbsp;</div>
     </div>
-    <!-- Markup -->
-    <h1>HELLO WORLD</h1>
+    <!-- Home -->
+    <section id="home">
+
+      <!-- Background video -->
+      <video id="home-bg-video" autoplay poster="video/solo.jpg" muted loop>
+        <source src="video/solo.mp4" type="video/mp4">
+        <source src="video/solo.ogv" type="video/ogg">
+        <source src="video/solo.webm" type="video/webm">
+      </video>
+
+      <!-- Overlay -->
+      <div id="home-overlay"></div>
+
+      <!-- Home -->
+      <div id="home-content">
+        <div id="home-content-inner" class="text-center">
+
+          <div id="home-heading">
+              <h1 id="home-heading-1">Digital</h1><br>
+              <h1 id="home-heading-2">Creative <span>Agency</span></h1><br>
+          </div>
+
+          <div id="home-text">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim </p>
+          </div>
+
+          <div id="home-btn">
+            <a class="btn btn-general btn-home" href="#about" role="button" title="Start Now">Start Now</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Arrow Down -->
+      <a href="#about" id="arrow-down">
+      <i class="fas fa-angle-down"></i>
+
+      </a>
+    </section>
     <!-- JQuery -->
     <script src="js/jquery.js"></script>
     <!-- Bootstrap JS -->

@@ -431,8 +431,8 @@ ul.social-list li a:hover {
   -webkit-cursor: zoom-in;
   cursor: zoom-in;
   opacity: 0;
-  -webkit-transition: all .8s ease;
-  transition: all .8s ease;
+  -webkit-transition: all .5s ease;
+  transition: all .5s ease;
 }
 
 /* Portfolio Item Details Effect */

@@ -557,6 +557,11 @@ ul.navbar-nav > li > a:focus {
   z-index: 2;
 }
 
+.white-nav-top ul.navbar-nav >li.active > a{
+  color: #f4c613;
+  font-weight: 500;
+}
+
 .white-nav-top ul.navbar-nav >li > a {
   color: #212226;
 }

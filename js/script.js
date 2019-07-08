@@ -34,7 +34,12 @@ $(function() {
 
 // Navigation
 $(function() {
+  showHideNav();
   $(window).scroll(function(){
+    showHideNav();
+  });
+
+  function showHideNav() {
     if($(window).scrollTop() > 50) {
       $("nav").addClass("white-nav-top");
       $(".navbar-brand img").attr("src", "img/logo/logo-dark.png")
@@ -42,5 +47,5 @@ $(function() {
       $("nav").removeClass("white-nav-top");
       $(".navbar-brand img").attr("src", "img/logo/logo.png")
     }
-  })
+  }
 })

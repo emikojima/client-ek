@@ -484,7 +484,7 @@ ul.social-list li a:hover {
   margin: 25px 0 20px 0;
 }
 .office {
-  margin-left: 60%;
+  padding-right: 20%;
 }
 
 ul.office-details {
@@ -517,4 +517,37 @@ footer p {
 
 footer p span {
   color:#f4c613;
+}
+
+/* Navigation */
+.navbar {
+  padding: 35px 0 20px 0;
+}
+
+.side-nav-wrapper {
+  padding: 0 85px;
+}
+
+.navbar-brand {
+  padding: 13px 15px;
+}
+
+ul.navbar-nav > li > a {
+  font-family: "Raleway", sans-serif;
+  color: #fff;
+  font-size: 13px;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+ul.navbar-nav > li > a:hover,
+ul.navbar-nav > li > a:focus {
+  background: none;
+  color: #f4c613;
+}
+
+.white-nav-top {
+  background: #fff;
+  padding: 10px 0;
 }

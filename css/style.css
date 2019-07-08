@@ -503,3 +503,18 @@ ul.office-details li i {
   font-size: 20px;
   width: 45px;
 }
+
+/* Footer */
+footer {
+  background: #212226;
+  padding: 30px;
+}
+
+footer p {
+  color: #fff;
+  line-height: 20px;
+}
+
+footer p span {
+  color:#f4c613;
+}

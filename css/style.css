@@ -477,3 +477,29 @@ ul.social-list li a:hover {
 .portfolio-item:hover .portfolio-item-overlay {
   opacity: 1;
 }
+
+/* Contact Section */
+
+#contact-left p {
+  margin: 25px 0 20px 0;
+}
+.office {
+  margin-left: 60%;
+}
+
+ul.office-details {
+  list-style: none;
+  padding: 0;
+}
+
+ul.office-details li {
+  font-family: "Open Sans", sans-serif;
+  margin-top: 12px;
+  display: -webkit-box;
+  display: flex;
+}
+
+ul.office-details li i {
+  font-size: 20px;
+  width: 45px;
+}

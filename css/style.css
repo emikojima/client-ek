@@ -552,8 +552,8 @@ ul.navbar-nav > li > a:focus {
 .white-nav-top {
   background: #fff;
   padding: 10px 0;
-  -webkit-box-shadow: 0 8pc 6pc -9px #999;
-  box-shadow: 0 8pc 6pc -9px #999;
+  -webkit-box-shadow: 0 8px 6px -9px #999;
+  box-shadow: 0 8px 6px -9px #999;
   z-index: 2;
 }
 

@@ -49,3 +49,16 @@ $(function() {
     }
   }
 })
+
+// NOTE: Smooth scrolling
+
+$(function() {
+  $("a.smooth-scroll").click(function(event) {
+    event.preventDefault();
+    //get section id eg: #about, #home, etc.
+    const section_id = $(this).attr("href");
+    $("html, body").animate({
+      scrollTop: $(section_id).offset().top
+    }, 1250)
+  })
+})

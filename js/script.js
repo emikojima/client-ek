@@ -62,3 +62,12 @@ $(function() {
     }, 1250)
   })
 })
+
+//fetch blog
+$(function() {
+  fetch('https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@emi8emi')
+   .then((res) => res.json())
+   .then((data) => {
+      console.log(data.items)
+    })
+})

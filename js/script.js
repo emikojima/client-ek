@@ -69,5 +69,6 @@ $(function() {
    .then((res) => res.json())
    .then((data) => {
       console.log(data.items)
+      data.items.map(i => console.log(i.title, i.content))
     })
 })

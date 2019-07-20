@@ -70,5 +70,6 @@ $(function() {
    .then((data) => {
       console.log(data.items)
       data.items.map(i => console.log(i.title, i.content))
+      data.items.map(i => $('.blog-title').html(i.title))
     })
 })

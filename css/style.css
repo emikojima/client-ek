@@ -570,3 +570,21 @@ ul.navbar-nav > li > a:focus {
 .white-nav-top ul.navbar-nav > li > a:focus {
   color: #f4c613;
 }
+
+/* Blog */
+.blog-title {
+  font-family: "Raleway", sans-serif;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: black;
+}
+
+.blog-post {
+  list-style: none;
+}
+
+img.blog-topImg {
+    width: 500px;
+    height: 250px;
+}

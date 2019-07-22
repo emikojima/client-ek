@@ -66,39 +66,42 @@ $(function() {
 // //fetch blog
 $(function() {
   fetch('https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@emi8emi')
-   .then((res) => res.json())
-   .then((data) => {
+    .then((res) => res.json())
+    .then((data) => {
       console.log(data.items)
       const posts = data.items
       // data.items.map(i => console.log(i.title, i.content))
       // data.items.map(i => $('.blog-title').append($("<li>" + i.title+"</li>"+"<p>"+i.content+"</p>")))
-      function shortenText(text,startingPoint ,maxLength) {
-       return text.length > maxLength?
-          text.slice(startingPoint, maxLength):
+      function shortenText(text, startingPoint, maxLength) {
+        return text.length > maxLength ?
+          text.slice(startingPoint, maxLength) :
           text
       }
 
       let output = '';
-     posts.forEach((item) => {
+      posts.forEach((item) => {
         output += `
-        <li class="blog__post">
+
+              <div class="col-md-6">
+        <li class="blog-post">
            <a href="${item.link}">
-              <img src="${item.thumbnail}" class="blog__topImg"></img>
-              <div class="blog__content">
-                 <div class="blog_preview">
-                    <h2 class="blog__title">${shortenText(item.title, 0, 30)+ '...'}</h2>
-                    <p class="blog__intro">${'...' + shortenText((item.content),60, 300)+ '...'}</p>
+              <img src="${item.thumbnail}" class="blog-topImg"></img>
+              <div class="blog-content">
+                 <div class="blog-preview">
+                    <h2 class="blog-title">${shortenText(item.title, 0, 50)}</h2>
+                    <p class="blog-intro">${'' + shortenText((item.content),0, 300)+ '...'}</p>
                  </div>
-                 <hr>
-                 <div class="blog__info">
-                    <span class="blog__author">${item.author}</span>
-                    <span class="blog__date">${shortenText(item.pubDate,0 ,10)}</span>
+
+                 <div class="blog-info">
+                    <span class="blog-author">By: ${item.author}</span>
+                    <span class="blog-date">${shortenText(item.pubDate,0 ,10)}</span>
                  </div>
               </div>
            <a/>
-        </li>`
-     })
-     document.querySelector('.blog-title').innerHTML = output
+        </li>
+        <hr></div>`
+      })
+      document.querySelector('.blog-title').innerHTML = output
     })
 
 })

@@ -588,3 +588,7 @@ img.blog-topImg {
     width: 500px;
     height: 250px;
 }
+
+#blog .vertical-heading {
+  margin-bottom: 50px;
+}

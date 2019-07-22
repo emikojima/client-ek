@@ -35,12 +35,12 @@ $(function() {
 // Navigation
 $(function() {
   showHideNav();
-  $(window).scroll(function(){
+  $(window).scroll(function() {
     showHideNav();
   });
 
   function showHideNav() {
-    if($(window).scrollTop() > 50) {
+    if ($(window).scrollTop() > 50) {
       $("nav").addClass("white-nav-top");
       $(".navbar-brand img").attr("src", "img/logo/logo-dark.png")
     } else {
@@ -81,25 +81,25 @@ $(function() {
       let output = '';
       posts.forEach((item) => {
         output += `
+          <div class="col-md-6">
+            <li class="blog-post">
+               <a href="${item.link}">
+                  <img src="${item.thumbnail}" class="blog-topImg"></img>
+                  <div class="blog-content">
+                     <div class="blog-preview">
+                        <h2 class="blog-title">${shortenText(item.title, 0, 50)}</h2>
+                        <p class="blog-intro">${'' + shortenText((item.content),0, 300)+ '...'}</p>
+                     </div>
 
-              <div class="col-md-6">
-        <li class="blog-post">
-           <a href="${item.link}">
-              <img src="${item.thumbnail}" class="blog-topImg"></img>
-              <div class="blog-content">
-                 <div class="blog-preview">
-                    <h2 class="blog-title">${shortenText(item.title, 0, 50)}</h2>
-                    <p class="blog-intro">${'' + shortenText((item.content),0, 300)+ '...'}</p>
-                 </div>
-
-                 <div class="blog-info">
-                    <span class="blog-author">By: ${item.author}</span>
-                    <span class="blog-date">${shortenText(item.pubDate,0 ,10)}</span>
-                 </div>
-              </div>
-           <a/>
-        </li>
-        <hr></div>`
+                     <div class="blog-info">
+                        <span class="blog-author">By: ${item.author}</span>
+                        <span class="blog-date">${shortenText(item.pubDate,0 ,10)}</span>
+                     </div>
+                  </div>
+               <a/>
+            </li>
+            <hr>
+            </div>`
       })
       document.querySelector('.blog-title').innerHTML = output
     })

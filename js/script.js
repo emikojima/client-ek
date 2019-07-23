@@ -88,7 +88,7 @@ $(function() {
                   <div class="blog-content">
                      <div class="blog-preview">
                         <h2 class="blog-title">${shortenText(item.title, 0, 50)}</h2>
-                        <p class="blog-intro">${'' + shortenText((item.content),0, 300)+ '...'}</p>
+                        <p class="blog-intro">${'' + shortenText((item.content),0, 200)+ '...'}</p>
                      </div>
 
                      <div class="blog-info">

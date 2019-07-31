@@ -69,7 +69,7 @@ $(function() {
     .then((res) => res.json())
     .then((data) => {
       console.log(data.items)
-      const posts = data.items
+      const posts = data.items.slice(0,4)
       // data.items.map(i => console.log(i.title, i.content))
       // data.items.map(i => $('.blog-title').append($("<li>" + i.title+"</li>"+"<p>"+i.content+"</p>")))
       function shortenText(text, startingPoint, maxLength) {
@@ -83,12 +83,12 @@ $(function() {
         output += `
           <div class="col-md-6">
             <li class="blog-post">
-               <a href="${item.link}">
+
                   <img src="${item.thumbnail}" class="blog-topImg"></img>
                   <div class="blog-content">
                      <div class="blog-preview">
-                        <h2 class="blog-title">${shortenText(item.title, 0, 50)}</h2>
-                        <p class="blog-intro">${'' + shortenText((item.content),0, 200)+ '...'}</p>
+                        <h3 class="blog-title">${shortenText(item.title, 0, 30) + ' ...' }</h2>
+                        <p class="blog-intro">${'' + shortenText((item.content),0, 200)+ '...' + `<a href="${item.link}">READ MORE</a>`}</p>
                      </div>
 
                      <div class="blog-info">
@@ -96,12 +96,12 @@ $(function() {
                         <span class="blog-date">${shortenText(item.pubDate,0 ,10)}</span>
                      </div>
                   </div>
-               <a/>
+
             </li>
             <hr>
             </div>`
       })
-      document.querySelector('.blog-title').innerHTML = output
+      document.querySelector('.blog').innerHTML = output
     })
 
 })
